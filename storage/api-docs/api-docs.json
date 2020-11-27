@@ -1,0 +1,35 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Learning Swagger Laravel",
+        "description": "Swagger",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/user": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get List of user",
+                "description": "Get Information User",
+                "operationId": "userId",
+                "responses": {
+                    "200": {
+                        "description": "All User",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "\\App\\Http\\Resources\\UserCollection"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
